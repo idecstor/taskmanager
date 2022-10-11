@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
-    <h1>About us</h1>
-    <p>222lorem ipsum .......</p>
+{% extends 'main/base.html' %}
 
-</body>
-</html>
+{% block title %}
+About page
+{% endblock %}
+
+{% block content %}
+          <h1 class="display-4 fw-normal">About page</h1>
+      <p class="fs-5 text-muted">222lorem ipsum .......</p>
+{% endblock %}
+
+
