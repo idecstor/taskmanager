@@ -1,11 +1,16 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Main page
+{{ title }}
 {% endblock %}
 
 {% block content %}
       <h1 class="display-4 fw-normal">Hello world</h1>
-      <p class="fs-5 text-muted">lorem ipsum .......</p>
+    {% for el in tasks %}
+        <div class="alert alert-warning mt-2">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.task }}</p>
+        </div>
+    {% endfor %}
 {% endblock %}
 
