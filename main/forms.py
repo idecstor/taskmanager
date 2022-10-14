@@ -10,10 +10,9 @@ class TaskForm(ModelForm):
             "title": TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Type task name'
-        }),
+            }),
             "task": Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Type description'
-        }),
-
-        },
+            }),
+        }
