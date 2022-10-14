@@ -1,6 +1,7 @@
 from django.db import models
 import sys
 
+
 class Task(models.Model):
     title = models.CharField('Task name', max_length=50)
     task = models.TextField('Description')
@@ -11,5 +12,3 @@ class Task(models.Model):
     class Meta:
         verbose_name = 'Task'
         verbose_name_plural = 'Tasks'
-
-

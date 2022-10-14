@@ -2,6 +2,8 @@ from django.http import request
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
+from django.views.generic import DetailView
+
 
 def index(request):
     tasks = Task.objects.order_by('-id')
@@ -26,4 +28,11 @@ def create(request):
         'error': error
     }
     return render(request, 'main/create.html', context)
+
+
+class TaskView(DetailView):
+    model = Task
+    template_name = 'main/task.html'
+    context_object_name = 'taskdetail'
+
 
