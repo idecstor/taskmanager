@@ -2,7 +2,7 @@ from django.http import request
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def index(request):
@@ -35,4 +35,14 @@ class TaskView(DetailView):
     template_name = 'main/task.html'
     context_object_name = 'taskdetail'
 
+class TaskUpdateView(UpdateView):
+    model = Task
+    template_name = 'main/create.html'
+    form_class = TaskForm
+
+
+class TaskDeleteView(DeleteView):
+    model = Task
+    template_name = 'main/delete.html'
+    success_url = '/'
 
