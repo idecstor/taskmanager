@@ -13,6 +13,7 @@ class TaskForm(ModelForm):
             }),
             "task": Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Type description'
+                'placeholder': 'Type description',
+                'required': False
             }),
         }

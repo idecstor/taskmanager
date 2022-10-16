@@ -4,7 +4,7 @@ import sys
 
 class Task(models.Model):
     title = models.CharField('Task name', max_length=50)
-    task = models.TextField('Description')
+    task = models.TextField('Description', blank=True)
 
     def __str__(self):
         return self.title

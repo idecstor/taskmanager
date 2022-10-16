@@ -9,8 +9,8 @@
         <h1>{{ taskdetail.title }}</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+              <a href="{% url 'taskedit' taskdetail.id %}" class="btn btn-info">Edit</a>
+              <a href="{% url 'delete' taskdetail.id %}" class="btn btn-danger">Delete</a>
           </div>
         </div>
       </div>

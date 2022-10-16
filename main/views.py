@@ -1,8 +1,9 @@
-from django.http import request
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
 from django.views.generic import DetailView, UpdateView, DeleteView
+
+
 
 
 def index(request):
@@ -37,7 +38,7 @@ class TaskView(DetailView):
 
 class TaskUpdateView(UpdateView):
     model = Task
-    template_name = 'main/create.html'
+    template_name = 'main/edit.html'
     form_class = TaskForm
 
 

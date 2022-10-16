@@ -11,6 +11,7 @@ Create task
               <form method="post">
                {% csrf_token %}
                 <button type="submit" class="btn btn-success">Delete task</button>
+                  <a href="{% url 'taskdetail' task.id %}" class="btn btn-info">Cancel</a>
                <span>{{ error }}</span>
                </form>
           </div>
